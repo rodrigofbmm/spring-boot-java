@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Jugador</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="menu-container">
+  <h1>Agregar Jugador</h1>
+
+  <form th:action="@{/jugadores}" method="post">
+    <input type="text" name="nombre" placeholder="Nombre del jugador" required style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 15px;">
+    <button type="submit" class="menu-button">Añadir</button>
+  </form>
+
+  <h2>Jugadores registrados:</h2>
+  <ul>
+    <li th:each="jugador : ${jugadores}" th:text="${jugador.nombre}"></li>
+  </ul>
+
+  <a href="/" class="menu-button" style="background-color: #f44336; margin-top: 20px;">Volver al menú</a>
+</div>
+</body>
+</html>

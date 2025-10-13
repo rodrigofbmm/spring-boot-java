@@ -1,7 +1,7 @@
-/* Fondo de toda la página */
+/* Fondo de la página */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* degradado bonito */
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -9,21 +9,30 @@ body {
     margin: 0;
 }
 
-/* Contenedor del menú */
+/* Contenedor del menú y formulario */
 .menu-container {
     background-color: white;
-    padding: 50px 40px;
+    padding: 40px 30px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     text-align: center;
-    width: 300px;
+    width: 350px;
 }
 
 /* Título */
-.menu-container h1 {
+.menu-container h1, .menu-container h2 {
     color: #333;
-    margin-bottom: 40px;
-    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Input del formulario */
+.menu-container input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 /* Botones */
@@ -31,7 +40,7 @@ body {
     display: block;
     width: 100%;
     padding: 15px 0;
-    margin: 15px 0;
+    margin: 10px 0;
     background-color: #4CAF50;
     color: white;
     text-decoration: none;
@@ -40,6 +49,8 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
 }
 
 /* Hover */
@@ -47,4 +58,17 @@ body {
     background-color: #45a049;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Lista de jugadores */
+.menu-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.menu-container ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
 }
