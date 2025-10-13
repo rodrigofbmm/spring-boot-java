@@ -1,0 +1,50 @@
+/* Fondo de toda la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* degradado bonito */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Contenedor del menú */
+.menu-container {
+    background-color: white;
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 300px;
+}
+
+/* Título */
+.menu-container h1 {
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/* Botones */
+.menu-button {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    margin: 15px 0;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Hover */
+.menu-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}

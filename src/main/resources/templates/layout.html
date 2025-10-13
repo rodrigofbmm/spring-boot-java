@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout (titulo, content)">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Mi sitio Thymeleaf</title>
+</head>
+<body>
+<header>
+    <h2>🌸 Ejemplo Spring Boot + Thymeleaf</h2>
+    <hr>
+</header>
+
+<main th:replace="${content}">
+    Contenido por defecto
+</main>
+
+<footer>
+    <hr>
+    <p>© 2025 Mi aplicación</p>
+</footer>
+</body>
+</html>

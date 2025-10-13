@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(titulo='Página de Saludo', content=~{::main})}">
+<body>
+<main>
+  <h1 th:text="'Hola, ' + ${nombre} + '!'">Hola, Mundo!</h1>
+  <p><a th:href="@{/adios}">Ir a la página de despedida</a></p>
+</main>
+</body>
+</html>

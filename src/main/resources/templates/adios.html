@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(titulo='Página de Despedida', content=~{::main})}">
+<body>
+<main>
+    <h1>👋 ¡Adiós!</h1>
+    <p><a th:href="@{/hola}">Volver al inicio</a></p>
+</main>
+</body>
+</html>
