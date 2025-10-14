@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<div class="menu-container">
+
+    <div th:if="${mostrarSeleccion}">
+        <h2>Selecciona un jugador</h2>
+        <form method="get" action="/jugar">
+            <select name="nombre" required>
+                <option th:each="jugador : ${jugadores}" th:value="${jugador.nombre}" th:text="${jugador.nombre}"></option>
+            </select>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit" class="menu-button">Jugar</button>
+        </form>
+        <p th:if="${error}" th:text="${error}" style="color:red;"></p>
+        <a href="/" class="menu-button">Volver al menú</a>
+    </div>
+
+    <div th:if="${!mostrarSeleccion}">
+        <p th:text="${mensaje}"></p>
+
+        <div th:if="${juegoActivo}">
+            <form method="post" action="/intento">
+                <input type="number" name="numero" min="1" max="10" required>
+                <button type="submit" class="menu-button">Intentar</button>
+            </form>
+        </div>
+
+        <div th:if="${!juegoActivo}">
+            <a href="/" class="menu-button">Volver al menú</a>
+            <a href="/jugar" class="menu-button">Jugar de nuevo</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+

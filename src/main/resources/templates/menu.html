@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <title>Juego Menu</title>
-  <link rel="stylesheet" type="text/css" href="/style.css">
-</head>
-<body>
-<div class="menu-container">
-  <h1 th:text="${menuTitle}">MENÚ PRINCIPAL</h1>
+  <!DOCTYPE html>
+  <html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>Juego Menu</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body>
+  <div class="menu-container">
+    <h1 th:text="${menuTitle}">MENÚ PRINCIPAL</h1>
 
-  <a href="/jugadores" class="menu-button">Meter jugadores</a>
-  <a href="#" class="menu-button">Jugar</a>
-  <a href="#" class="menu-button">Ver estadísticas</a>
-  <a href="#" class="menu-button">Sacar estadísticas a fichero</a>
-</div>
-</body>
-</html>
+    <a href="/jugadores" class="menu-button">Meter jugadores</a>
+    <a href="/jugar" class="menu-button">Jugar</a>
+    <a href="/estadisticas" class="menu-button">Ver estadísticas</a>
+    <a href="#" class="menu-button">Sacar estadísticas a fichero</a>
+  </div>
+  </body>
+  </html>

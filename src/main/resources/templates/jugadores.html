@@ -9,10 +9,14 @@
 <div class="menu-container">
   <h1>Agregar Jugador</h1>
 
-  <form th:action="@{/jugadores}" method="post">
-    <input type="text" name="nombre" placeholder="Nombre del jugador" required style="width: 100%; padding: 10px; font-size: 16px; margin-bottom: 15px;">
+  <form th:action="@{/jugadores}" method="post" th:object="${jugador}">
+    <input type="text" th:field="*{nombre}" placeholder="Nombre del jugador" required>
+    <input type="password" th:field="*{password}" placeholder="Contraseña" required>
+    <input type="password" th:field="*{passwordConfirm}" placeholder="Confirmar contraseña" required>
     <button type="submit" class="menu-button">Añadir</button>
   </form>
+
+  <p th:if="${error}" th:text="${error}" style="color:red;"></p>
 
   <h2>Jugadores registrados:</h2>
   <ul>

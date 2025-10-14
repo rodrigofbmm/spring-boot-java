@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Estadísticas</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<div class="menu-container">
+  <h1>Estadísticas de Jugadores</h1>
+
+  <table border="1" style="width: 100%; text-align: center;">
+    <thead>
+    <tr>
+      <th>Jugador</th>
+      <th>Partidas Jugadas</th>
+      <th>Partidas Ganadas</th>
+      <th>Porcentaje de Éxito</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="jugador : ${jugadores}">
+      <td th:text="${jugador.nombre}"></td>
+      <td th:text="${jugador.partidasJugadas}"></td>
+      <td th:text="${jugador.partidasGanadas}"></td>
+      <td th:text="${jugador.partidasJugadas > 0 ? ((jugador.partidasGanadas*100) / jugador.partidasJugadas) + '%' : '0%'}"></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <a href="/" class="menu-button" style="margin-top: 20px;">Volver al menú</a>
+</div>
+</body>
+</html>
