@@ -1,78 +1,74 @@
-Spring Boot Java – Implementación visual del juego
+🎮 Spring Boot Java – Implementación Visual del Juego
 
-Este proyecto es una aplicación desarrollada con Spring Boot que implementa un juego visual utilizando tecnologías web y Java.
+Este proyecto es una aplicación web interactiva desarrollada con Spring Boot que implementa un juego visual utilizando tecnologías modernas de Java, HTML, CSS y JavaScript.
 
-📂 Estructura del proyecto
+🧱 Estructura del Proyecto
+spring-boot-java/
+│
+├── .mvn/                   # Wrapper de Maven
+├── mvnw, mvnw.cmd           # Scripts para ejecutar Maven sin instalarlo globalmente
+├── pom.xml                  # Archivo de configuración del proyecto Maven
+├── src/                     # Código fuente Java, recursos estáticos y vistas HTML
+│   ├── main/
+│   │   ├── java/            # Código backend del juego (controladores, servicios, etc.)
+│   │   ├── resources/       # Archivos de configuración y plantillas HTML
+│   └── test/                # Pruebas unitarias o de integración
+├── .gitignore               # Archivos y carpetas ignorados por Git
+└── .gitattributes           # Configuración adicional de Git
 
-El repositorio contiene los siguientes elementos principales:
-
-.mvn/, mvnw, mvnw.cmd — Wrapper de Maven
-
-pom.xml — Archivo de configuración del proyecto Maven
-
-src/ — Código fuente Java, recursos estáticos y vistas HTML
-
-.gitignore, .gitattributes — Archivos de configuración de Git
-
-🛠️ Tecnologías utilizadas
-
-Java 17+
-
-Spring Boot
-
-Maven
-
-HTML / CSS / JavaScript (para la parte visual)
-
-🚀 Cómo ejecutar el proyecto
-
-Clona el repositorio:
-
+🛠️ Tecnologías Utilizadas
+Tecnología	Descripción
+☕ Java 17+	Lenguaje principal del backend
+🌱 Spring Boot	Framework para crear aplicaciones Java rápidas y estructuradas
+🧩 Maven	Sistema de construcción y gestión de dependencias
+💻 HTML / CSS / JavaScript	Tecnologías para la parte visual e interactiva del juego
+🚀 Cómo Ejecutar el Proyecto
+1️⃣ Clona el repositorio
 git clone https://github.com/rodrigofbmm/spring-boot-java.git
 
-
-Entra al directorio del proyecto:
-
+2️⃣ Entra al directorio del proyecto
 cd spring-boot-java
 
-
-Compila y ejecuta el proyecto con Maven:
-
+3️⃣ Compila y ejecuta con Maven
 ./mvnw clean package
 ./mvnw spring-boot:run
 
 
-En Windows, usa:
+🪟 En Windows:
+
 mvnw.cmd spring-boot:run
 
-Abre el navegador en:
+4️⃣ Abre tu navegador
 
-http://localhost:8080
-
+👉 http://localhost:8080
 
 (o el puerto configurado en tu aplicación)
 
 🧩 Funcionalidades
 
-Interfaz web para interactuar con el juego
+✅ Interfaz web para interactuar con el juego
+✅ Lógica del juego implementada completamente en Java
+✅ Controladores gestionados por Spring Boot
+✅ Fácil integración de nuevas vistas o reglas de juego
+✅ Diseño modular y extensible
 
-Lógica del juego desarrollada completamente en Java
+💡 (Puedes añadir aquí detalles específicos del juego, sus reglas o instrucciones para jugar.)
 
-Integración con Spring Boot para gestionar controladores, vistas y dependencias
+🧪 Ejecución de Tests
 
-Posibilidad de ampliar el juego con más vistas o lógica personalizada
-
-(Aquí puedes añadir detalles específicos del juego, sus reglas o cómo se juega.)
-
-🧪 Ejecución de tests
-
-Si el proyecto incluye pruebas unitarias o de integración, puedes ejecutarlas con:
+Si el proyecto incluye pruebas unitarias o de integración, ejecútalas con:
 
 ./mvnw test
 
 ⚙️ Configuración
 
-Las propiedades del proyecto (puerto, perfiles, etc.) pueden configurarse en:
+Las propiedades de la aplicación (como el puerto, nombre de la app, perfiles, etc.) se encuentran en:
+
 src/main/resources/application.properties
 
-Asegúrate de tener instalado Java y Maven correctamente antes de ejecutar.
+
+Asegúrate de tener instalados correctamente:
+
+Java 17+
+
+Maven 3.8+ (o usa el wrapper incluido)
